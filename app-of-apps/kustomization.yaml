@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: backend-tests-go-favnzfyk 
+  janus-idp.io/tekton: backend-tests-go-favnzfyk
+  backstage.io/kubernetes-id: backend-tests-go-favnzfyk
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: backend-tests-go-favnzfyk
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
